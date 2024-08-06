@@ -1,0 +1,133 @@
+<mvc:View controllerName="desafioesporte85.appesporte.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="Projeto tênis">
+	<ObjectHeader title="Tennis updates"/>
+        
+        <IconTabBar
+		id="idIconTabBar">
+		<items>
+                <IconTabFilter text="ATP ranking" 
+                icon="sap-icon://male"
+                key="idATPranking">
+
+                    <!-- Tabela -->
+                    <Table id="idTable" items="{ATPRanking>/data}">
+                        <columns>
+                            <Column>
+                                <Text text="Ranking"></Text>
+                            </Column>
+                            <!-- Foto jogador -->
+                            <Column>
+                            </Column>
+                            <Column>
+                                <Text text="Name code"></Text>
+                            </Column>
+                            <Column>
+                                <Text text="Full name"></Text>
+                            </Column>
+                            <Column>
+                                <Text text="Points"></Text>
+                            </Column>
+                            <Column>
+                                <Text text="Country"></Text>
+                            </Column>
+                        </columns>
+
+                        <items>
+                            <ColumnListItem >
+                                <cells>
+                                    <Text text="{ATPRanking>ranking}"></Text>
+                                    <Image src="{ATPRanking>team/logo}" width="50%"/> 
+                                    <Text text="{ATPRanking>team/name_code}"></Text>
+                                    <Text text="{ATPRanking>team/name_full}"></Text>
+                                    <Text text="{ATPRanking>points}"></Text>
+                                    <Text text="{ATPRanking>team/country}"></Text>
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+
+                </IconTabFilter>
+
+				<IconTabFilter text="WTA ranking" 
+                icon="sap-icon://female"
+                key="idWTAranking">
+
+                    <!-- Tabela -->
+                    <Table id="idTable2" items="{WTARanking>/data}">
+                        <columns>
+                            <Column>
+                                <Text text="Ranking"></Text>
+                            </Column>
+                            <!-- Foto jogador -->
+                            <Column>
+                            </Column>
+                            <Column>
+                                <Text text="Name code"></Text>
+                            </Column>
+                            <Column>
+                                <Text text="Full name"></Text>
+                            </Column>
+                            <Column>
+                                <Text text="Points"></Text>
+                            </Column>
+                            <Column>
+                                <Text text="Country"></Text>
+                            </Column>
+                        </columns>
+
+                        <items>
+                            <ColumnListItem >
+                                <cells>
+                                    <Text text="{WTARanking>ranking}"></Text>
+                                    <Image src="{WTARanking>team/logo}" width="50%"/> 
+                                    <Text text="{WTARanking>team/name_code}"></Text>
+                                    <Text text="{WTARanking>team/name_full}"></Text>
+                                    <Text text="{WTARanking>points}"></Text>
+                                    <Text text="{WTARanking>team/country}"></Text>
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+
+                </IconTabFilter>
+
+
+                <IconTabFilter text="Events" 
+                icon="sap-icon://globe"
+                key="events">
+                <Table id="eventsTable" items="{Events>/data}">   
+                    <columns>
+                        <Column hAlign="Center"> 
+                        </Column>
+                        <Column hAlign="Center"> 
+                        </Column>
+                        <Column hAlign="Center"> 
+                        </Column>
+                    </columns>
+
+                    <items>
+                        <ColumnListItem vAlign="Middle">
+                            <cells>
+                                <Image src="{Events>home_team/logo}" width="50%"/> 
+								<VBox>
+									<Image src="{Events>league/logo}" width="50%"/> 
+									<ObjectIdentifier
+									title="{Events>home_team/name}({Events>home_team/country_code}) // {Events>away_team/name}({Events>away_team/country_code})"/>
+									<Text text="{Events>start_at}"/>
+									<Text text="Status: {Events>status_more}"/>
+									
+								</VBox>
+                                <Image src="{Events>away_team/logo}" width="50%"/> 
+                            </cells>
+                        </ColumnListItem>
+
+                    </items>
+                </Table>
+                </IconTabFilter>
+            </items>
+	</IconTabBar>
+
+    </Page>
+</mvc:View>
