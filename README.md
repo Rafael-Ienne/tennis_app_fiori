@@ -10,8 +10,7 @@ Já os dados foram coletados por meio da API [Tennis Live Data](https://rapidapi
 - Deploy em SAP Fiori Launchpad.
 
 ## Ranking ATP
-[Tennis Live Data](https://rapidapi.com/sportcontentapi/api/tennis-live-data/playground/apiendpoint_143edc78-e461-4efd-91bf-c686b53e28c5
-)
+[(Ranking ATP)](https://raw.githubusercontent.com/Rafael-Ienne/tennis_app_fiori/main/img/ranking_atp.png)
 
 ## Ranking WTA
 [Tennis Live Data](https://rapidapi.com/sportcontentapi/api/tennis-live-data/playground/apiendpoint_143edc78-e461-4efd-91bf-c686b53e28c5
